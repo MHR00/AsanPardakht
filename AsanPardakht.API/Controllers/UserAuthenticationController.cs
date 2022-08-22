@@ -2,6 +2,7 @@
 using AsanPardakht.Entities.Users;
 using AsanPardakht.Services.Interface;
 using AsanPardakht.Services.Services.Users;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -10,21 +11,28 @@ namespace AsanPardakht.API.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+    [AllowAnonymous]
     public class UserAuthenticationController : ControllerBase
     {
         private readonly IRegisterUserService _registerUser;
         private readonly ILoginUserService _loginUser;
+        private readonly IUserService _userService;
         private readonly IJwtService _jwtService;
         public UserAuthenticationController(IRegisterUserService registerUser,
             IJwtService jwtService,
-            ILoginUserService loginUser)
+            ILoginUserService loginUser,
+            IUserService userService)
         {
             _registerUser = registerUser;
             _jwtService = jwtService;
             _loginUser = loginUser;
+            _userService = userService;
         }
 
-        [HttpGet]
+
+      
+
+        [HttpGet("[action]")]
         public async Task<IResult> UserLogin([FromQuery] UserLoginDto user)
         {
             try

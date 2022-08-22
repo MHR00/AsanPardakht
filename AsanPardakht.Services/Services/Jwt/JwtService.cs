@@ -53,9 +53,9 @@ namespace AsanPardakht.Services.Services.Jwt
                 //new Claim(secutiryStampClaimType , users.SecurityStamp.ToString()),
             };
 
-            var roles = new Role[] { new Role { Name = "Admin" } };
-            foreach (var role in roles)
-                list.Add(new Claim(ClaimTypes.Role, role.Name));
+            //var roles = new Role[] { new Role { Name = "Admin" } };
+            //foreach (var role in roles)
+            //    list.Add(new Claim(ClaimTypes.Role, role.Name));
 
             return list;
         }
