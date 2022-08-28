@@ -49,7 +49,7 @@ namespace AsanPardakht.Services.Services.Jwt
             {
                 new Claim(ClaimTypes.Name, users.UserName),
                 new Claim(ClaimTypes.NameIdentifier,users.Id.ToString()),
-                new Claim(ClaimTypes.MobilePhone, users.PhoneNumber),
+                new Claim(ClaimTypes.MobilePhone, users.MobileNumber),
                 //new Claim(secutiryStampClaimType , users.SecurityStamp.ToString()),
             };
 

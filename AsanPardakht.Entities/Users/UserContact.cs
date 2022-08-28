@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 
 namespace AsanPardakht.Entities.Users
 {
-    public class RegisterUserDto
+    public class UserContactDto
     {
-        public string UserName { get; set; }
-        public string Password { get; set; }
+      
+        public string Name { get; set; }
         public string MobileNumber { get; set; }
     }
 }

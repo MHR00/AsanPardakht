@@ -16,7 +16,7 @@ namespace AsanPardakht.Entities.Users
         public string LastName { get; set; }
         public bool IsActive { get; set; }
         public bool Gender { get; set; }
-        public string PhoneNumber { get; set; }
+        public string MobileNumber { get; set; }
         public DateTime ResisterDate { get; set; }
     }
 }

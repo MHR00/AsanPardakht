@@ -4,6 +4,6 @@ namespace AsanPardakht.Services.Interface
 {
     public interface IEditUserService
     {
-        Task EditUser(EditUserDto user);
+        Task EditUser(EditUserDto user , int userId);
     }
 }

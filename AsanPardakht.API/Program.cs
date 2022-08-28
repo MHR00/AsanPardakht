@@ -2,6 +2,7 @@ using AsanPardakht.Data.DbAccess;
 using AsanPardakht.Services;
 using AsanPardakht.Services.Interface;
 using AsanPardakht.Services.Services.Jwt;
+using AsanPardakht.Services.Services.Transaction;
 using AsanPardakht.Services.Services.Users;
 using AsanPardakht.WebFramework.Configuration;
 using Microsoft.AspNetCore.Authorization;
@@ -15,6 +16,7 @@ builder.Services.AddSingleton<IRegisterUserService, RegisterUserService>();
 builder.Services.AddSingleton<ILoginUserService, LoginUserService>();
 builder.Services.AddSingleton<IEditUserService, EditUserService>();
 builder.Services.AddSingleton<IUserService, UserService>();
+builder.Services.AddSingleton<IDispositService, DispositService>();
 builder.Services.AddScoped<IJwtService, JwtService>();
 builder.Services.AddJwtAuthentication();
 //AddAuthorization
